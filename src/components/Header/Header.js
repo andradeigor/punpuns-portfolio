@@ -11,16 +11,16 @@ const Header = () => {
         </div>
         <nav>
           <ul className="flex gap-8  align-text-bottom">
-            <li className="font-Inter text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
               About
             </li>
-            <li className="font-Inter text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
               Portfolio
             </li>
-            <li className="font-Inter text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
               Expirience
             </li>
-            <li className="font-Inter text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
               Contact
             </li>
           </ul>
