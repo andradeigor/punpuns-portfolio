@@ -7,5 +7,5 @@ module.exports = {
       Inter: ["Inter"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };

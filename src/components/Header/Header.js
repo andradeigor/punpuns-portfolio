@@ -4,13 +4,13 @@ import SunPath from "../../assets/sun.svg";
 const Header = () => {
   const [theme, setTheme] = useState(false);
   return (
-    <header className="w-full h-24 border-b-2 px-64 shadow-md">
+    <header className="w-full h-24 border-b-2 px-64 shadow-md sticky top-0 left-0 bg-white">
       <div className="flex w-full h-full items-center justify-between ">
         <div className="">
           <h1 className="font-Inter text-3xl text-black font-bold">PunPun's</h1>
         </div>
         <nav>
-          <ul className="flex gap-8 h-8 align-text-bottom">
+          <ul className="flex gap-8  align-text-bottom">
             <li className="font-Inter text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
               About
             </li>
