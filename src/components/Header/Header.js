@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MoonPath from "../../assets/moon.svg";
 import SunPath from "../../assets/sun.svg";
+import { useScroll, motion, useTransform } from "framer-motion";
 const Header = () => {
   const [theme, setTheme] = useState(false);
+  const { scrollYProgress } = useScroll();
   return (
-    <header className="sticky top-0 left-0 z-30 h-24 w-full border-b-2 bg-white px-64 shadow-md">
-      <div className="flex h-full w-full items-center justify-between ">
+    <header
+      className={`fixed top-0 left-0 z-30 flex h-24 w-full border-b-2 bg-white shadow-md`}
+    >
+      <div className="flex h-full w-full items-center justify-around ">
         <div className="">
           <h1 className="font-Inter text-3xl font-bold text-zinc-900">
             PunPun's
@@ -51,6 +55,10 @@ const Header = () => {
           </label>
         </div>
       </div>
+      <motion.div
+        className="absolute bottom-0 h-2 w-full bg-black"
+        style={{ scaleX: scrollYProgress }}
+      />
     </header>
   );
 };
