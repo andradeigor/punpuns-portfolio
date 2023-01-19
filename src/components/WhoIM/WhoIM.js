@@ -1,9 +1,9 @@
 import wppPath from "../../assets/wpp.png";
 
-const HowIM = () => {
+const WhoIM = () => {
   return (
-    <main className="absolute top-0 left-0 h-full w-full">
-      <div className="position relative h-full w-full">
+    <section className="">
+      <div className="position relative h-screen w-full">
         <img
           src={wppPath}
           alt="Background Image"
@@ -32,8 +32,8 @@ const HowIM = () => {
           <div className="hidden h-full w-1/2"></div>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
-export default HowIM;
+export default WhoIM;
