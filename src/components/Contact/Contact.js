@@ -63,7 +63,39 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="h-full w-1/2 bg-blue-200"></div>
+          <form className="h-full w-1/2 ">
+            <div className="flex h-1/5 w-full gap-x-20 ">
+              <div className="h-full w-1/2 ">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="flex h-4/6 w-full items-center justify-center pl-4 text-lg font-light text-zinc-800 shadow-md focus:shadow-xl"
+                />
+              </div>
+              <div className="h-full w-1/2 ">
+                <input
+                  type="text"
+                  placeholder="Your Email"
+                  className="flex h-4/6 w-full items-center justify-center pl-4 text-lg font-light text-zinc-800 shadow-md focus:shadow-xl"
+                />
+              </div>
+            </div>
+            <div className="flex h-4/5 w-full flex-col justify-between ">
+              <div className=" h-4/6 w-full ">
+                <textarea
+                  type="text"
+                  placeholder="Your Message"
+                  className="h-full w-full border-[1px] border-zinc-800/20 pt-4 pl-4 text-lg font-light text-zinc-800 shadow-md focus:shadow-xl"
+                />
+              </div>
+              <div className="flex h-14 w-full items-center ">
+                <button className="h-5/6 w-1/3 rounded bg-zinc-800 font-Inter font-semibold text-white duration-500 ease-out hover:bg-zinc-900">
+                  {" "}
+                  SEND MESSAGE
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
