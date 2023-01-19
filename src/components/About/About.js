@@ -10,10 +10,10 @@ const About = () => {
               <div className="h-0.5 w-48 rounded bg-zinc-900" />
             </div>
           </div>
-          <div className="flex h-full w-full bg-cyan-100 py-10">
-            <div className="flex h-full w-1/2 flex-col gap-4 bg-slate-200">
+          <div className="flex h-full w-full py-10">
+            <div className="flex h-full w-1/2 flex-col gap-4">
               <h1 className="font-Inter text-2xl font-bold"> Hi, again</h1>
-              <p className="font-regular  text-base text-zinc-800">
+              <p className="font-regular  mb-8 font-Inter text-base text-zinc-800">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
                 in auctor elit. Aenean sed arcu commodo, venenatis justo a,
                 rhoncus nibh. Donec sed ex luctus, hendrerit massa id, interdum
@@ -23,7 +23,11 @@ const About = () => {
                 DOWNLOAD MY CV
               </button>
             </div>
-            <div className="h-full w-1/2 bg-slate-400"></div>
+            <div className="flex h-full w-1/2 flex-col justify-between bg-slate-400">
+              <div className="h-16 w-full bg-black"></div>
+              <div className="h-16 w-full bg-black"></div>
+              <div className="h-16 w-full bg-black"></div>
+            </div>
           </div>
         </div>
       </div>
