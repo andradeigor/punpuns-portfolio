@@ -4,43 +4,45 @@ import SunPath from "../../assets/sun.svg";
 const Header = () => {
   const [theme, setTheme] = useState(false);
   return (
-    <header className="w-full h-24 border-b-2 px-64 shadow-md sticky top-0 left-0 bg-white">
-      <div className="flex w-full h-full items-center justify-between ">
+    <header className="sticky top-0 left-0 z-30 h-24 w-full border-b-2 bg-white px-64 shadow-md">
+      <div className="flex h-full w-full items-center justify-between ">
         <div className="">
-          <h1 className="font-Inter text-3xl text-black font-bold">PunPun's</h1>
+          <h1 className="font-Inter text-3xl font-bold text-zinc-900">
+            PunPun's
+          </h1>
         </div>
         <nav>
           <ul className="flex gap-8  align-text-bottom">
-            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500">
               About
             </li>
-            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500">
               Portfolio
             </li>
-            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500">
               Expirience
             </li>
-            <li className="font-Inter text-md text-black font-normal hover:text-gray-500 cursor-pointer duration-150 ease-out">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500">
               Contact
             </li>
           </ul>
         </nav>
         <div className="flex items-center">
-          <label className="block w-20 h-8 relative " htmlFor="checkbox">
+          <label className="relative block h-8 w-20 " htmlFor="checkbox">
             <input
               type="checkbox"
               id="checkbox"
               className="hidden"
               onClick={() => setTheme(!theme)}
             />
-            <div className="bg-white border-black border-2 cursor-pointer bottom-0 left-0 rounded-3xl right-0 top-0 absolute ease-out duration-300 ">
+            <div className="absolute bottom-0 left-0 right-0 top-0 cursor-pointer rounded-3xl border-2 border-zinc-900 bg-white duration-300 ease-out ">
               <div
-                className={`bg-black bottom-0.5 left-1 h-6 w-6  absolute duration-300  rounded-full z-10 ${
+                className={`absolute bottom-0.5 left-1 z-10 h-6  w-6 rounded-full  bg-zinc-900 duration-300 ${
                   theme && "translate-x-11"
                 }`}
               ></div>
               <img
-                className={` bottom-0.5 right-1 h-6 w-6  absolute duration-300 ${
+                className={` absolute bottom-0.5 right-1 h-6  w-6 duration-300 ${
                   theme && "-translate-x-11"
                 }`}
                 src={theme ? SunPath : MoonPath}
