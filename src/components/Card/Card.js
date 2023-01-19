@@ -4,7 +4,6 @@ import BirdPath from "../../assets/bird.png";
 
 const Card = ({ data }) => {
   const imagePath = [BBBPath, BirdPath, GitPath];
-  console.log(imagePath[data.index]);
   return (
     <div className="mt-5 flex h-full w-1/4 flex-col rounded-md bg-white shadow-md hover:shadow-xl">
       <div className="relative h-4/6 w-full ">
