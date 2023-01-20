@@ -1,10 +1,10 @@
 import Myexperience from "../MyExperience/MyExperience";
 import About from "../About/About";
-const AboutExperienceContainer = () => {
+const AboutExperienceContainer = ({ theme }) => {
   return (
     <section className="h-screen w-full">
       <About />
-      <Myexperience />
+      <Myexperience theme={theme} />
     </section>
   );
 };

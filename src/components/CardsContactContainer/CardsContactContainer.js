@@ -1,10 +1,10 @@
 import Cards from "../Cards/Cards";
 import Contact from "../Contact/Contact";
 
-const AboutExperienceContainer = () => {
+const AboutExperienceContainer = ({ theme }) => {
   return (
     <section className="h-screen w-full">
-      <Cards />
+      <Cards theme={theme} />
       <Contact />
     </section>
   );
