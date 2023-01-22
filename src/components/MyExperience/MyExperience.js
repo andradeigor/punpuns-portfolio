@@ -3,7 +3,7 @@ import DarkCheckMarkPath from "../../assets/darkCheck.svg";
 
 const Myexperience = ({ theme }) => {
   return (
-    <div className="flex h-1/2 w-full justify-center bg-white px-64 pt-16 dark:bg-zinc-900">
+    <div className="flex h-1/2 w-full justify-center bg-white px-64 pt-16 transition-colors duration-500 ease-out dark:bg-zinc-900">
       <div className="flex h-full w-2/3 flex-col ">
         <div className="flex w-full flex-col items-center ">
           <h1 className="mb-4 font-Inter text-4xl font-bold text-zinc-900 dark:text-gray-100">
