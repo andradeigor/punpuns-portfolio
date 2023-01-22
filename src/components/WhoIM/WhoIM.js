@@ -31,7 +31,7 @@ const WhoIM = ({ theme }) => {
 
   return (
     <section className="">
-      <div className="position relative h-screen w-full">
+      <div className="position relative h-screen w-full  ">
         <img
           src={theme ? wppDarkPath : wppPath}
           alt="Background Image"
@@ -39,8 +39,8 @@ const WhoIM = ({ theme }) => {
             !theme && "h-5/6 w-5/6"
           } absolute right-0 bottom-0 bg-contain `}
         />
-        <div className="absolute top-1/2 left-1/2 flex h-4/6 w-4/6 -translate-x-1/2 -translate-y-1/2">
-          <div className="flex h-full  w-1/2 flex-col items-start gap-4 py-40">
+        <div className="absolute top-1/2 left-1/2 flex h-4/6 w-4/6 -translate-x-1/2  -translate-y-1/2">
+          <div className="flex h-full  w-1/2 flex-col items-start gap-4  py-40">
             <AnimatePresence>
               <motion.h2
                 exit="hidden"

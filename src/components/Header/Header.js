@@ -6,26 +6,26 @@ const Header = ({ setTheme, theme }) => {
   const { scrollYProgress } = useScroll();
   return (
     <header
-      className={`fixed top-0 left-0 z-30 flex h-24 w-full border-b-2 bg-white shadow-md dark:border-zinc-800 dark:bg-zinc-900`}
+      className={`fixed top-0 left-0 z-30 flex h-24 w-full border-b-2 bg-white shadow-md transition-colors duration-500 ease-out dark:border-zinc-800 dark:bg-zinc-900`}
     >
       <div className="flex h-full w-full items-center justify-around ">
         <div className="">
-          <h1 className="font-Inter text-3xl font-bold text-zinc-900 dark:text-gray-100">
+          <h1 className="font-Inter text-3xl font-bold text-zinc-900 transition-colors duration-500 ease-out dark:text-gray-100">
             PunPun's
           </h1>
         </div>
         <nav>
           <ul className="flex gap-8  align-text-bottom">
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500 dark:text-gray-100">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
               About
             </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500 dark:text-gray-100">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
               Portfolio
             </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500 dark:text-gray-100">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
               Expirience
             </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 duration-150 ease-out hover:text-gray-500 dark:text-gray-100">
+            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
               Contact
             </li>
           </ul>

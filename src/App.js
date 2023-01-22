@@ -14,7 +14,7 @@ function App() {
     <div
       className={`${
         theme && "dark"
-      }z-20 min-h-screen w-screen overflow-y-scroll bg-white font-Inter overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300 scrollbar-thumb-rounded-3xl dark:bg-zinc-900`}
+      }z-20 min-h-screen w-screen overflow-y-scroll bg-white font-Inter transition-colors duration-500 ease-out overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-300 scrollbar-thumb-rounded-3xl dark:bg-zinc-900`}
     >
       <div className="relative h-24 w-full overflow-x-hidden">
         <Header setTheme={() => setTheme(!theme)} theme={theme} />
