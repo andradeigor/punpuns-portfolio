@@ -1,4 +1,4 @@
-# DiscordBotUFRJ
+# PunPun's Portfolio
 
 Este projeto consiste num modelo de Portfolio implementado com base no personagem <a href="https://pt.wikipedia.org/wiki/Oyasumi_Punpun">PunPun</a>. O site foi feito apenas para estudos e é baseado em modelos disponíveis na internet.
 
