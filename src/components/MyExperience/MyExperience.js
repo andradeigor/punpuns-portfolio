@@ -1,5 +1,6 @@
 import CheckMarkPath from "../../assets/check.svg";
 import DarkCheckMarkPath from "../../assets/darkCheck.svg";
+import { motion } from "framer-motion";
 
 const Myexperience = ({ theme }) => {
   return (
@@ -40,7 +41,17 @@ const Myexperience = ({ theme }) => {
                     Elementary School
                   </h1>
                   <h2 className="pt-1 text-sm font-light text-zinc-800 dark:text-gray-50">
-                    My dream back there was to become a Space Scientist
+                    My dream back them was to become a Space Scientist.{" "}
+                    {theme && (
+                      <motion.span
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2 }}
+                        className=" text-sm font-bold text-red-500"
+                      >
+                        And I failed
+                      </motion.span>
+                    )}
                   </h2>
                 </div>
               </div>
@@ -69,7 +80,16 @@ const Myexperience = ({ theme }) => {
                     High School
                   </h1>
                   <h2 className="pt-1 text-sm font-light text-zinc-800 dark:text-gray-50">
-                    Aiko hates me
+                    Aiko{" "}
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1.2 }}
+                      className="transition-all duration-1000 dark:font-bold dark:text-red-500 "
+                    >
+                      hates
+                    </motion.span>{" "}
+                    me
                   </h2>
                 </div>
               </div>
@@ -101,8 +121,30 @@ const Myexperience = ({ theme }) => {
                     Early 20s
                   </h1>
                   <h2 className="pt-1 text-sm font-light text-zinc-800 dark:text-gray-50">
-                    Maybe Aiko don't hates me anymore and everything is gonna be
-                    perfect
+                    Maybe Aiko don't hates me
+                    {theme && (
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.2 }}
+                        className="transition-all duration-1000 dark:font-bold dark:text-red-500 "
+                      >
+                        {" "}
+                        (yes, she does)
+                      </motion.span>
+                    )}{" "}
+                    anymore and everything is gonna be perfect
+                    {theme && (
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1.2 }}
+                        className="transition-all duration-1000 dark:font-bold dark:text-red-500 "
+                      >
+                        {" "}
+                        (I screwed up everything)
+                      </motion.span>
+                    )}{" "}
                   </h2>
                 </div>
               </div>
@@ -130,9 +172,14 @@ const Myexperience = ({ theme }) => {
                   <h1 className="text-lg font-medium text-zinc-900 dark:text-gray-100">
                     Early 20s
                   </h1>
-                  <h2 className="pt-1 text-sm font-light text-zinc-800 dark:text-gray-50">
+                  <motion.h2
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                    className="pt-1 text-sm font-light text-zinc-800  dark:font-bold dark:text-red-600"
+                  >
                     Oh god.
-                  </h2>
+                  </motion.h2>
                 </div>
               </div>
             </div>

@@ -89,7 +89,7 @@ const WhoIM = ({ theme }) => {
                 {theme && (
                   <motion.span
                     variants={letter}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 1.2 }}
                     className="text-2xl font-bold text-red-500"
                   >
                     It's my fault
