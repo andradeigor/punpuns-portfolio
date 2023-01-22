@@ -1,34 +1,63 @@
 import { useState, useEffect } from "react";
 import MoonPath from "../../assets/moon.svg";
 import SunPath from "../../assets/sun.svg";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { useScroll, motion } from "framer-motion";
 const Header = ({ setTheme, theme }) => {
   const { scrollYProgress } = useScroll();
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  /*essa parte do controlnavbar e do useeffect eu sinceramente peguei do google*/
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
   return (
     <header
-      className={`fixed top-0 left-0 z-30 flex h-24 w-full border-b-2 bg-white shadow-md transition-colors duration-500 ease-out dark:border-zinc-800 dark:bg-zinc-900`}
+      className={`fixed top-0 left-0 z-30 flex  w-full border-b-2 bg-white shadow-md transition-all duration-700 ease-out dark:border-zinc-800 dark:bg-zinc-900 ${
+        show ? "h-24" : "h-16"
+      }`}
     >
-      <div className="flex h-full w-full items-center justify-around ">
-        <div className="">
+      <div className="flex h-full w-full items-center justify-around transition-all duration-700 ease-out">
+        <div className="transition-all duration-700 ease-out">
           <h1 className="font-Inter text-3xl font-bold text-zinc-900 transition-colors duration-500 ease-out dark:text-gray-100">
-            PunPun's
+            <a href="#home">PunPun's</a>
           </h1>
         </div>
+
         <nav>
-          <ul className="flex gap-8  align-text-bottom">
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
-              About
-            </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
-              Portfolio
-            </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
-              Expirience
-            </li>
-            <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
-              Contact
-            </li>
-          </ul>
+          {show && (
+            <ul className="flex gap-8  align-text-bottom">
+              <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
+                <a href="#about">About </a>
+              </li>
+              <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
+                <a href="#experience">Experience</a>
+              </li>
+              <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li className="text-md cursor-pointer font-Inter font-normal text-zinc-900 transition-colors duration-500 ease-out hover:text-gray-500 dark:text-gray-100">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          )}
         </nav>
         <div className="flex items-center">
           <label className="relative block h-8 w-20 " htmlFor="checkbox">
@@ -54,8 +83,9 @@ const Header = ({ setTheme, theme }) => {
           </label>
         </div>
       </div>
+
       <motion.div
-        className="absolute bottom-0 h-2 w-full bg-zinc-900 dark:bg-gray-100"
+        className="absolute bottom-0 h-2 w-full bg-zinc-900 transition-colors duration-500 ease-out dark:bg-gray-100"
         style={{ scaleX: scrollYProgress }}
       />
     </header>

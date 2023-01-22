@@ -30,11 +30,14 @@ const WhoIM = ({ theme }) => {
   };
 
   return (
-    <section className="">
+    <section id="home">
       <div className="position relative h-screen w-full  ">
-        <img
+        <motion.img
           src={theme ? wppDarkPath : wppPath}
           alt="Background Image"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4 }}
           className={`${
             !theme && "h-5/6 w-5/6"
           } absolute right-0 bottom-0 bg-contain `}
@@ -51,7 +54,7 @@ const WhoIM = ({ theme }) => {
               >
                 {helloQuote.split("").map((caracter, index) => {
                   return (
-                    <motion.span key={caracter + "-" + index} variants={letter}>
+                    <motion.span key={"helloQuote" + index} variants={letter}>
                       {caracter}
                     </motion.span>
                   );
@@ -66,7 +69,7 @@ const WhoIM = ({ theme }) => {
               >
                 {nameQuote.split("").map((caracter, index) => {
                   return (
-                    <motion.span key={caracter + "-" + index} variants={letter}>
+                    <motion.span key={"nameQuote" + index} variants={letter}>
                       {caracter}
                     </motion.span>
                   );
@@ -79,10 +82,10 @@ const WhoIM = ({ theme }) => {
                 animate="visible"
                 className="font-regular  text-2xl text-zinc-800 dark:text-gray-50"
               >
-                {aboutQuote.split("\n").map((caracter, index) => {
+                {aboutQuote.split("\n").map((word, index) => {
                   return (
-                    <motion.span key={caracter + "-" + index} variants={letter}>
-                      {caracter}
+                    <motion.span key={"aboutQuote" + index} variants={letter}>
+                      {word}
                     </motion.span>
                   );
                 })}
@@ -97,9 +100,11 @@ const WhoIM = ({ theme }) => {
                 )}
               </motion.h3>
             </AnimatePresence>
-            <button className="rounded-lg bg-zinc-800 px-10 py-2 font-Inter text-lg font-semibold text-white duration-500 hover:bg-zinc-900 dark:text-gray-50">
-              MY WORK
-            </button>
+            <a href="#portfolio">
+              <button className="rounded-lg bg-zinc-800 px-10 py-2 font-Inter text-lg font-semibold text-white duration-500 hover:bg-zinc-900 dark:text-gray-50">
+                MY WORK
+              </button>
+            </a>
           </div>
           <div className="hidden h-full w-1/2"></div>
         </div>

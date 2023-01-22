@@ -1,6 +1,9 @@
 const About = ({ theme }) => {
   return (
-    <div className="flex h-1/2 w-full justify-center  bg-gray-100 px-64  transition-colors duration-500 ease-out dark:bg-zinc-800">
+    <div
+      id="about"
+      className="flex h-1/2 w-full justify-center  bg-gray-100 px-64  transition-colors duration-500 ease-out dark:bg-zinc-800"
+    >
       <div className="flex h-full w-2/3 flex-col py-10">
         <div className="flex w-full flex-col items-center ">
           <h1 className="mb-4 font-Inter text-4xl font-bold text-zinc-900 dark:text-gray-100">
@@ -26,7 +29,7 @@ const About = ({ theme }) => {
               DOWNLOAD MY CV
             </button>
           </div>
-          <div className="flex h-full w-1/2 flex-col justify-around  transition-all ">
+          <div className="flex h-full w-1/2 flex-col justify-around   transition-all ">
             <div className="h-16 w-full">
               <p className="mb-4 text-base font-bold text-zinc-900 dark:text-gray-100">
                 Sadness
