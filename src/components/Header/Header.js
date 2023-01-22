@@ -55,7 +55,7 @@ const Header = ({ setTheme, theme }) => {
         </div>
       </div>
       <motion.div
-        className="absolute bottom-0 h-2 w-full bg-black dark:bg-gray-100"
+        className="absolute bottom-0 h-2 w-full bg-zinc-900 dark:bg-gray-100"
         style={{ scaleX: scrollYProgress }}
       />
     </header>
