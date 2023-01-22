@@ -10,7 +10,7 @@ const Card = ({ data, theme }) => {
       <div className="relative h-4/6 w-full ">
         <img
           src={
-            data.index != 2
+            data.index !== 2
               ? imagePath[data.index]
               : theme
               ? darkGitPath

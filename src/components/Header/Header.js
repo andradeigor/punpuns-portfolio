@@ -74,6 +74,7 @@ const Header = ({ setTheme, theme }) => {
                 }`}
               ></div>
               <img
+                alt="theme icon"
                 className={` absolute bottom-0.5 right-1 h-6  w-6 duration-300 ${
                   theme && "-translate-x-11"
                 }`}
