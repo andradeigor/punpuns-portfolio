@@ -41,7 +41,7 @@ const About = ({ theme }) => {
             </div>
             <div className="h-16 w-full">
               <p className="mb-4 text-base font-bold text-zinc-900 dark:text-gray-100">
-                Hopoless
+                Hopeless
               </p>
               <div className=" relative w-full ">
                 <div className="absolute inset-0 h-2 rounded bg-zinc-900/40 dark:bg-gray-100/40"></div>
